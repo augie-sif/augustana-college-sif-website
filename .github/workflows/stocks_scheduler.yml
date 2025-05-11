@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Trigger stock update
         run: |
-          curl -X POST https://augustana-college-sif-website-novrions-projects.vercel.app/api/stocks_scheduler \
+          curl -X POST https://augustana-college-sif-website.vercel.app/api/stocks_scheduler \
           -H "Authorization: Bearer ${{ secrets.API_SECRET_KEY }}"
