@@ -30,7 +30,78 @@ export default async function AdminUsersPage() {
 					<h2 className="text-xl font-semibold mb-4">Users</h2>
 					<AdminUsersList users={users} />
 				</div>
+
+				<div className="mt-6 rounded-lg border border-solid border-white/[.145] p-6">
+					<h2 className="text-xl font-semibold mb-2">
+						Permissions
+					</h2>
+					<p className="mb-6">
+						A user cannot modify the role of a user with a higher rank. Only admins, the president and the vice president may modify user roles.
+					</p>
+					<table className="rounded-lg border border-white/[.145] p-6 w-full">
+						<tr>
+							<th className="border border-white/[.145]">Role</th>
+							<th className="border border-white/[.145]">Rank</th>
+							<th className="border border-white/[.145]">Holdings & Stock Pitches</th>
+							<th className="border border-white/[.145]">Gallery & Meeting Minutes</th>
+							<th className="border border-white/[.145]">Everything Else</th>
+						</tr>
+						<tr>
+							<th className="border border-white/[.145]">Admin</th>
+							<th className="border border-white/[.145]">3</th>
+							<th className="border border-white/[.145] text-green-500">Write</th>
+							<th className="border border-white/[.145] text-green-500">Write</th>
+							<th className="border border-white/[.145] text-green-500">Write</th>
+						</tr>
+						<tr>
+							<th className="border border-white/[.145]">President</th>
+							<th className="border border-white/[.145]">2</th>
+							<th className="border border-white/[.145] text-green-500">Write</th>
+							<th className="border border-white/[.145] text-green-500">Write</th>
+							<th className="border border-white/[.145] text-green-500">Write</th>
+						</tr>
+						<tr>
+							<th className="border border-white/[.145]">Vice President</th>
+							<th className="border border-white/[.145]">1</th>
+							<th className="border border-white/[.145] text-green-500">Write</th>
+							<th className="border border-white/[.145] text-green-500">Write</th>
+							<th className="border border-white/[.145] text-green-500">Write</th>
+						</tr>
+						<tr>
+							<th className="border border-white/[.145]">Holdings Write</th>
+							<th className="border border-white/[.145] text-red-500">×</th>
+							<th className="border border-white/[.145] text-green-500">Write</th>
+							<th className="border border-white/[.145] text-orange-400">Read</th>
+							<th className="border border-white/[.145] text-orange-400">Read</th>
+						</tr>
+						<tr>
+							<th className="border border-white/[.145]">Secretary</th>
+							<th className="border border-white/[.145] text-red-500">×</th>
+							<th className="border border-white/[.145] text-orange-400">Read</th>
+							<th className="border border-white/[.145] text-green-500">Write</th>
+							<th className="border border-white/[.145] text-orange-400">Read</th>
+						</tr>
+						<tr>
+							<th className="border border-white/[.145]">Holdings Read</th>
+							<th className="border border-white/[.145] text-red-500">×</th>
+							<th className="border border-white/[.145] text-orange-400">Read</th>
+							<th className="border border-white/[.145] text-orange-400">Read</th>
+							<th className="border border-white/[.145] text-orange-400">Read</th>
+						</tr>
+						<tr>
+							<th className="border border-white/[.145]">User</th>
+							<th className="border border-white/[.145] text-red-500">×</th>
+							<th className="border border-white/[.145] text-red-500">×</th>
+							<th className="border border-white/[.145] text-orange-400">Read</th>
+							<th className="border border-white/[.145] text-orange-400">Read</th>
+						</tr>
+					</table>
+					<h2 className="text-xl font-semibold mb-2 mt-4">Key</h2>
+					<p><span className="font-semibold text-green-500">Write</span>: May modify</p>
+					<p><span className="font-semibold text-orange-400">Read</span>: May view</p>
+					<p><span className="font-semibold text-red-500">×</span>: No access or N/A</p>
+				</div>
 			</div>
-		</div>
+		</div >
 	);
 }
