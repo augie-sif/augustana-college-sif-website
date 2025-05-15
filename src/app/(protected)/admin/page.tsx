@@ -103,6 +103,10 @@ export default async function AdminPage() {
 						You don&apos;t have access to any admin features.
 					</div>
 				)}
+
+				<h1 className="text-xl font-semibold mt-8">Credits</h1>
+				<p className="mt-2">This website was created by <a href="https://github.com/novrion" className="text-blue-500 font-semibold">Elias Lindstenz</a> for the Augustana College Student Investment Fund during two weeks in the spring of 2025. The website source code is located in its repository: <a href="https://github.com/augie-sif/augustana-college-sif-website" className="text-blue-500 font-semibold">augustana-college-sif-website</a>.</p>
+				<p className="mt-2"><span className="font-semibold">Contact</span>: <a href="mailto:elindstenz@outlook.com" className="text-blue-500 font-semibold">elindstenz@outlook.com</a></p>
 			</div>
 		</div>
 	);
