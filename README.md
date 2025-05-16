@@ -30,23 +30,23 @@ The complete codebase is maintained in this GitHub repository, which serves as t
 
 ## Application Flow
 ```
-                           ┌──────────────┐     ┌─────────────────────┐     ┌───────────────────┐
-                           │ User Browser │<--->│  Vercel (Next.js)   │<--->│  Supabase         │
-                           └──────────────┘     │  - Frontend         │     │  - PostgreSQL     │
-                                                │  - API Routes       │     │    Database       │
-                                                └─────────────────────┘     └───────────────────┘
-                                                         ↑   ↑                        ↑
-                                                         │   │                        │
-                                                         ↓   ↓                        ↓
-                                                 ┌────────────────┐            ┌───────────────┐
-                                                 │  Google OAuth  │            │  Finnhub API  │
-                                                 └────────────────┘            └───────────────┘
-                                                                                     ↑
-                                                                                     │
-                                                 ┌─────────────────────┐             │
-                                                 │  GitHub Actions     │-------------┘
-                                                 │  - Stock Scheduler  │
-                                                 └─────────────────────┘
+                   ┌──────────────┐     ┌─────────────────────┐     ┌───────────────────┐
+                   │ User Browser │<--->│  Vercel (Next.js)   │<--->│  Supabase         │
+                   └──────────────┘     │  - Frontend         │     │  - PostgreSQL     │
+                                        │  - API Routes       │     │    Database       │
+                                        └─────────────────────┘     └───────────────────┘
+                                                ↑   ↑                        ↑
+                                                │   │                        │
+                                                ↓   ↓                        ↓
+                                          ┌────────────────┐          ┌───────────────┐
+                                          │  Google OAuth  │          │  Finnhub API  │
+                                          └────────────────┘          └───────────────┘
+                                                                             ↑
+                                                                             │
+                                         ┌─────────────────────┐             │
+                                         │  GitHub Actions     │-------------┘
+                                         │  - Stock Scheduler  │
+                                         └─────────────────────┘
 ```
 
 ## Environment Variables
