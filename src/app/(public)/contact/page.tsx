@@ -61,6 +61,13 @@ export default function ContactPage() {
 							</a>
 						</p>
 					)}
+					{user.description && (
+						<div className="border-t border-white/[.145]">
+							<p className="text-sm mt-2 font-[family-name:var(--font-geist-sans)]">
+								{user.description}
+							</p>
+						</div>
+					)}
 				</div>
 			</div>
 		);
